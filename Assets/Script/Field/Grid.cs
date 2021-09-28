@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-namespace Scenes.Script.Field
+namespace Script.Field
 {
     public class Grid
     {
@@ -15,7 +15,7 @@ namespace Scenes.Script.Field
         public int Height => m_Height;
 
         private FlowFieldPathfinding m_Pathfinding;
-        public Grid(int width, int height)
+        public Grid(int width, int height,Vector3 offset, float nodeSize, Vector2Int target)
         {
             m_Height = height;
             m_Width = width;
@@ -26,11 +26,11 @@ namespace Scenes.Script.Field
             {
                 for (int j = 0; j < m_Nodes.GetLength(1); j++)
                 {
-                    m_Nodes[i, j] = new Node();
+                    m_Nodes[i, j] = new Node(offset + new Vector3(i+0.5f, 0, j+0.5f) * nodeSize);
                 }
             }
 
-            m_Pathfinding = new FlowFieldPathfinding(this, Vector2Int.zero);
+            m_Pathfinding = new FlowFieldPathfinding(this, target);
             m_Pathfinding.UpdateField();
         }
 
@@ -59,6 +59,11 @@ namespace Scenes.Script.Field
                     yield return GetNode(i, j);
                 }
             }
+        }
+
+        public void UpdatePathfinding()
+        {
+            m_Pathfinding.UpdateField();
         }
     }
 }

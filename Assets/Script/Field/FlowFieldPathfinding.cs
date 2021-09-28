@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-namespace Scenes.Script.Field
+namespace Script.Field
 {
     public class FlowFieldPathfinding
     {

@@ -1,11 +1,19 @@
-﻿namespace Scenes.Script.Field
+﻿using UnityEngine;
+
+namespace Script.Field
 {
     public class Node
     {
+        public Vector3 Position;
         public Node NextNode;
         public bool IsOccupied;
 
         public float PathWeight;
+
+        public Node(Vector3 position)
+        {
+            Position = position;
+        }
 
         public void ResetWeight()
         {
