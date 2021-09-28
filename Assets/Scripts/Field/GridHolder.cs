@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-namespace Script.Field
+namespace Scripts.Field
 {
     public class GridHolder : MonoBehaviour
     {

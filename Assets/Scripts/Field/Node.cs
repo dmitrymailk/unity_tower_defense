@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Script.Field
+namespace Scripts.Field
 {
     public class Node
     {

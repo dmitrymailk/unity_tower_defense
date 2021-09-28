@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-namespace Script.Field
+namespace Scripts.Field
 {
     public class Grid
     {

@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
-using Script.Field;
+using Scripts.Field;
 
-namespace Script.Unit
+namespace Scripts.Enemy
 {
     public class GridMovementAgent: MonoBehaviour
     {
@@ -20,7 +20,7 @@ namespace Script.Unit
                 return;
 
             Vector3 target = m_TargetNode.Position;
-            
+
             float distance = (target - transform.position).magnitude;
             if (distance < TOLERANCE)
             {
