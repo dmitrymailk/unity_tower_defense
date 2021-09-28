@@ -1,6 +1,8 @@
-﻿using Scripts.Assets;
+﻿using System;
+using Scripts.Assets;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Object = UnityEngine.Object;
 
 namespace Scripts.Runtime
 {
@@ -29,6 +31,10 @@ namespace Scripts.Runtime
 
         private static void StartPlayer(AsyncOperation operation)
         {
+            if (!operation.isDone)
+            {
+                throw new Exception("Cant load scene")
+            }
             s_Player = new Player();
             Runner runner = Object.FindObjectOfType<Runner>();
             runner.StartRunning();
