@@ -10,6 +10,9 @@ namespace Scripts.Field
         private int m_Width;
         private int m_Height;
 
+        private Vector2Int m_StartCoordinate;
+        private Vector2Int m_TargetCoordinate;
+
         public int Width => m_Width;
 
         public int Height => m_Height;

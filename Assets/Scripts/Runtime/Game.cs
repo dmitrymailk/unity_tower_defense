@@ -33,7 +33,7 @@ namespace Scripts.Runtime
         {
             if (!operation.isDone)
             {
-                throw new Exception("Cant load scene")
+                throw new Exception("Cant load scene");
             }
             s_Player = new Player();
             Runner runner = Object.FindObjectOfType<Runner>();
